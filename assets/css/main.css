@@ -2162,6 +2162,10 @@
 				background: rgba(192, 192, 192, 0.35);
 			}
 
+		#header img {
+			margin-bottom: 2em;
+		}
+
 		#header footer {
 			margin: 1em 0 0 0;
 		}
@@ -2177,22 +2181,12 @@
 
 		body.homepage #header:after {
 			content: '';
-			background: #1C0920;
 			display: block;
 			position: absolute;
 			left: 0;
 			top: 0;
 			width: 100%;
 			height: 100%;
-			opacity: 0;
-			-moz-transition: opacity 2.5s ease-in-out;
-			-webkit-transition: opacity 2.5s ease-in-out;
-			-ms-transition: opacity 2.5s ease-in-out;
-			transition: opacity 2.5s ease-in-out;
-			-moz-transition-delay: 0.5s;
-			-webkit-transition-delay: 0.5s;
-			-ms-transition-delay: 0.5s;
-			transition-delay: 0.5s;
 		}
 
 	body.homepage.is-loading #header:after {
