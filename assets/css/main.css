@@ -1608,7 +1608,7 @@
 	}
 
 	strong, b {
-		font-weight: bold;
+		font-weight: 500;
 		color: #4d5059;
 	}
 
@@ -1707,6 +1707,10 @@
 
 		section.special > header, section.special > footer, article.special > header, article.special > footer {
 			text-align: center;
+		}
+
+		article.special > p {
+			font-size: 0.9em;
 		}
 
 	.row > section, .row > article {
@@ -2178,6 +2182,7 @@
 
 		body.homepage #header h1 {
 			font-size: 4em;
+			font-weight: 300;
 		}
 
 		body.homepage #header:after {
@@ -2530,6 +2535,12 @@
 
 			.carousel article p {
 				text-align: center;
+				font-size: 0.9em;
+			}
+
+			.carousel article h3 {
+				font-weight: 300;
+				font-size: 1.2em;
 			}
 
 /* Wide */
