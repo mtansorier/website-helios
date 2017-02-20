@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Virtualisation XEN</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="projet_pro.html" id="logo">Projets professionnels</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Accueil</a></li>
+								<li>
+									<a href="projet_pro.html">Projet Pro.</a>
+									<ul>
+										<li><a href="projet_pro-xen.html">Virtualisation XEN</a></li>
+										<li><a href="#">Traitement d’images sur FPGA</a></li>
+										<li><a href="#">Logiciel d’apprentissage musicale</a></li>
+										<li>
+											<a href="#">OpenWide/Smile ...</a>
+											<ul>
+												<li><a href="#">IRT-systemX: Xvisor</a></li>
+												<li><a href="#">Quantaflow: Quantium v2</a></li>
+												<li><a href="#">Hutchinson: AVAC</a></li>
+												<li><a href="#">Canal+: &lt;todo&gt;</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Projet Perso.</a>
+									<ul>
+										<li>
+											<a href="#">Projets PIC ...</a>
+											<ul>
+												<li><a href="#">Table d’illusion infinie – PIC16F87</a></li>
+												<li><a href="#">Télécommande infrarouge – PIC16F87</a></li>
+												<li><a href="#">Feu tricolore de présence – PIC16F87</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Sites Web ...</a>
+											<ul>
+												<li><a href="#">Antonnière Judo Club 72</a></li>
+												<li><a href="#">Service Moules et Mécanique de Précision</a></li>
+												<li><a href="#">Forum pour le Comité Départemental de Judo de la Sarthe</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li><a href="#">Judo</a></li>
+								<li><a href="#">Associations</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<div class="row 200%">
+							
+							<!-- left part -->
+							<div class="3u 12u(mobile)" id="sidebar">
+								<hr class="first" />
+								<section>
+									<header>
+										<h3><a href="projet_pro.html">Autres Projets</a></h3>
+									</header>
+									<ul class="leftmenu">
+										<li><a href="projet_pro-xen.html">Virtualisation XEN</a></li>
+										<li><a href="#">Traitement d’images sur FPGA</a></li>
+										<li><a href="#">Logiciel d’apprentissage musicale</a></li>
+										<li>
+											<a href="#">OpenWide/Smile ...</a>
+											<ul class="leftmenu">
+												<li><a href="#">IRT-systemX: Xvisor</a></li>
+												<li><a href="#">Quantaflow: Quantium v2</a></li>
+												<li><a href="#">Hutchinson: AVAC</a></li>
+												<li><a href="#">Canal+: &lt;todo&gt;</a></li>
+											</ul>
+										</li>
+									</ul>
+								</section>
+								<hr />
+							</div>
+							
+							<!-- right part -->
+							<div class="7u 12u(mobile) important(mobile)" id="content">
+								<article id="main">
+									<header>
+										<h2>Virtualisation XEN</h2>
+									</header>
+									<div class="image centered" style="width: 376px"><img src="images/Xen_project.jpg" alt="" /></div>
+										<p>
+											Ce stage s’est déroulé au sein du département OS &amp; Linux de l’entreprise STMicroelectronics.<br />
+											L’objectif était de mettre en place une solution de virtualisation Xen sur des cartes spécifiques
+											 STMicroelectronics basée sur des processeurs de type ARMv8.<br />
+											Dans un premier temps, des recherches sur la virtualisation ont été faites, puis plus particulièrement
+											 sur la virtualisation Xen.<br />
+											Dans un second temps la solution de virtualisation Xen fut déployée sur une carte virtuelle générique ARMv8,
+											 puis sur les cartes virtuelles spécifiques STMicroelectronics.<br />
+											Pour finir, l’évaluation des performances a été faite en comparaison avec un autre outil de virtualisation Kvm.<br />
+											<i><u>Mots clés</u>: Linux, virtualisation, Xen, ARMv8, SoC, Kvm.</i>
+										</p>
+
+									<section>
+										<header>
+											<h3>Qu’est-ce que la virtualisation ?</h3>
+										</header>
+										<p>
+											De manière générale, la virtualisation permet d’avoir plusieurs OS (pas nécessairement les mêmes)
+											 sur une même machine physique.
+										</p>
+										<div class="image centered" style="width: 623px">
+											<img src="images/projet_pro-xen/serveurs_charge_de_travail.png" alt="Charge de travail de serveurs" />
+											<p>A gauche un serveur classique non virtualisé, et à droite un serveur virtualisé avec
+											 plusieurs environnement.</p>
+										</div>
+										<p>
+											Il existe 3 types de virtualisation:
+										</p>
+										<ul class="default">
+											<li>L’isolation</li>
+											<li>La paravirtualisation</li>
+											<li>La virtualisaiton complète</li>
+										</ul>
+										<p>
+											Xen utilise la virtualisation de type paravirtualisation:
+										</p>
+										<div class="image centered" style="border: none">
+											<img src="images/projet_pro-xen/diagramme_archihyperviseur.png" alt="Diagramme d'architecture d'hyperviseur" />
+										</div>
+										<p>
+											KVM lui utilise la virtualisation complète.
+										</p>
+									</section>
+
+									<section>
+										<header>
+											<h3>Faire fonctionner Xen</h3>
+										</header>
+										<p>
+											Une des étapes majeures est de faire fonctionner XEN sur Foundation Model.<br />
+											
+											La plateforme « Foundation Model ARMv8 » permet de simuler une architecture aarch64 avec
+											 ses périphériques essentiels pour exécuter un système d’exploitation Linux.
+											 (cette plateforme est fournie par <a href="http://www.arm.com">ARM.com</a>).
+										</p>
+										<div class="image centered" style="width: 410px">
+											<img src="images/projet_pro-xen/compilation_boot-wrapper.png" alt="Compilation et boot wrapper" />
+											<p>Le Foundation Model est lancé à partir d’une machine Ubuntu, sur laquelle la cross-compilation ARM 64bit a été effectué au préalable.</p>
+										</div>
+										<p>
+											Plusieurs OS peuvent donc être lancés sur cette machine.
+										</p>
+									</section>
+
+									<section>
+										<header>
+											<h3>Xen sur SoC</h3>
+										</header>
+										<p>
+											L’étape qui consiste à faire fonctionner Xen sur des cartes STMicroelectronics fut avortée,
+											 en effet les cartes physique étaient encore en cours de développement.<br />
+											Il a été tout de même possible de faire quelques tests sur plateforme virtuelle (VSoC) STMicroelectronics.
+											 Néanmoins certaines fonctionnalités étaient en cours de développement ce qui fait qu’une
+											 partie des tests n’ont pas put être effectués.
+										</p>
+									</section>
+
+									<section>
+										<header>
+											<h3>Les Tests</h3>
+										</header>
+										<p>
+											Pour ce qui est des tests, l’outil Xen gère bien les différentes accès mémoire et processeur.<br />
+											
+											Un des points important qui a été testé fut la capacité du réseau Ethernet.
+											 En effet les cartes STMicroelectronics  sont à destination du marché de box télévision,
+											 il faut donc un bon débit Ethernet.<br />
+											 
+											Xen offre des outils de gestion réseau:
+										</p>
+										<div class="image centered" style="width: 456px">
+											<img src="images/projet_pro-xen/network-bridge.png" alt="Xen network" />
+											<p>Xen met en place un bridge xenbr0 sur le Dom0 afin de gérer le réseau de ses différents domaines.</p>
+										</div>
+										<p>	
+											Après différents tests il s’est avéré que le débit Ethernet était fortement diminué:
+										</p>
+										<div class="image centered" style="width: 623px">
+											<img src="images/projet_pro-xen/network-bandwidth.png" alt="Xen network bandwidth" />
+											<p>Avec virtualisation le débit entre les différents domaines sont fortement diminué.</p>
+										</div>
+										<p>
+											Les résultats de KVM sur le réseau sont aussi médiocres.
+										</p>
+									</section>
+									
+									<section>
+										<header>
+											<h3>Docker</h3>
+										</header>
+										<p>
+											Une des possibilités pour concurrencer Xen et KVM en terme de virtualisation serait d’étudier les Dockers:
+										</p>	
+										<div class="image centered" style="width: 417px">
+											<img src="images/projet_pro-xen/docker_docker.png" alt="Docker" />
+											<p>Les Dokers permettent de ne virtualiser seulement les espaces utilisateur 
+												avec leur exécutable et librairie, et ainsi ne pas virtualiser l’OS dans son ensemble.</p>
+										</div>
+									</section>
+								</article>
+							</div>
+						</div>
+						<hr />
+						
+						<!-- sources -->
+						<div class="row">
+							<section class="12u 12u(mobile) special">
+								<header>
+									<h6>L’ensemble du stage n’est pas décrit ici. Une bonne partie a été omise. Seule la trame générale est présentée.</h6>
+								</header>
+							</section>
+						</div>
+					</div>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="12u">
+
+								<!-- Contact -->
+									<section class="contact">
+										<header>
+											<h3>Vous pouvez me retrouver sur:</h3>
+										</header>
+										<ul class="icons">
+											<li><a href="https://www.linkedin.com/in/micka%C3%ABl-tansorier-78b5549a/" class="icon fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+											<li><a href="https://github.com/mtansorier" class="icon fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
+											<li><a href="https://mickaeltansorier.wordpress.com/" class="icon fa-wordpress" title="Wordpress"><span class="label">Wordpress</span></a></li>
+											<li><a href="mailto:mickael@tansorier.fr" class="icon fa-envelope-o" title="E-mail"><span class="label">E-mail</span></a></li>
+											<li><a href="docs/Curriculum_Vitae_-_TANSORIER.pdf" class="icon fa-download" title="Curriculum Vitae"><span class="label">Curriculum Vitae</span></a></li>
+										</ul>
+									</section>
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li><img src="images/by.svg" /></li><li>Mickaël TANSORIER</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.onvisible.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
