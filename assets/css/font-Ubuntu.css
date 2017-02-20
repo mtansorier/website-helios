@@ -1,0 +1,40 @@
+
+/* http://font.ubuntu.com/ */
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url('../fonts/Ubuntu-L.ttf');
+}
+@font-face {
+	font-family: "Ubuntu";
+	font-style: italic;
+	src: url('../fonts/Ubuntu-LI.ttf');
+}
+@font-face {
+	font-family: "Ubuntu";
+	font-weight: 300;
+	src: url('../fonts/Ubuntu-R.ttf');
+}
+/* Ubuntu-RI.ttf */
+@font-face {
+	font-family: "Ubuntu";
+	font-weight: 500;
+	src: url('../fonts/Ubuntu-M.ttf');
+}
+/* Ubuntu-MI.ttf */
+@font-face {
+	font-family: "Ubuntu";
+	font-weight: bold;
+	src: url('../fonts/Ubuntu-B.ttf');
+}
+@font-face {
+	font-family: "Ubuntu";
+	font-weight: bold;
+	font-style: italic;
+	src: url('../fonts/Ubuntu-BI.ttf');
+}
+/* Ubuntu-C.ttf */
+/* UbuntuMono-BI.ttf */
+/* UbuntuMono-B.ttf */
+/* UbuntuMono-RI.ttf */
+/* UbuntuMono-R.ttf */
