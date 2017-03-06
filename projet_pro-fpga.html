@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Virtualisation XEN</title>
+		<title>Traitement d’images sur FPGA</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -24,7 +24,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="projet_pro.html" id="logo">Projets professionnels</a></h1>
+								<h1><a href="index.html" id="logo">Projets professionnels</a></h1>
 							</header>
 						</div>
 
@@ -33,7 +33,7 @@
 							<ul>
 								<li><a href="index.html">Accueil</a></li>
 								<li>
-									<a href="projet_pro.html">Projet Pro.</a>
+									<a href="#">Projet Pro.</a>
 									<ul>
 										<li><a href="projet_pro-xen.html">Virtualisation XEN</a></li>
 										<li><a href="projet_pro-fpga.html">Traitement d’images sur FPGA</a></li>
@@ -89,7 +89,7 @@
 								<hr class="first" />
 								<section>
 									<header>
-										<h3><a href="projet_pro.html">Autres Projets</a></h3>
+										<h3><a href="#">Autres Projets</a></h3>
 									</header>
 									<ul class="leftmenu">
 										<li><a href="projet_pro-xen.html">Virtualisation XEN</a></li>
@@ -113,127 +113,139 @@
 							<div class="7u 12u(mobile) important(mobile)" id="content">
 								<article id="main">
 									<header>
-										<h2>Virtualisation XEN</h2>
+										<h2>Traitement d’images sur FPGA</h2>
 									</header>
-									<div class="image centered" style="width: 376px"><img src="images/Xen_project.jpg" alt="" /></div>
+									<div class="image centered" style="width: 376px"><img src="images/FPGA_DE2-70.jpg" alt="" /></div>
 										<p>
-											Ce stage s’est déroulé au sein du département OS &amp; Linux de l’entreprise STMicroelectronics.<br />
-											L’objectif était de mettre en place une solution de virtualisation Xen sur des cartes spécifiques
-											 STMicroelectronics basée sur des processeurs de type ARMv8.<br />
-											Dans un premier temps, des recherches sur la virtualisation ont été faites, puis plus particulièrement
-											 sur la virtualisation Xen.<br />
-											Dans un second temps la solution de virtualisation Xen fut déployée sur une carte virtuelle générique ARMv8,
-											 puis sur les cartes virtuelles spécifiques STMicroelectronics.<br />
-											Pour finir, l’évaluation des performances a été faite en comparaison avec un autre outil de virtualisation Kvm.<br />
-											<i><u>Mots clés</u>: Linux, virtualisation, Xen, ARMv8, SoC, Kvm.</i>
+											Ce projet est la continuité de travaux de recherche de l’enseignant chercheur Pascal Picart.<br />
+
+											Un projet existant se trouve sur Matlab, or le temps de calcul est relativement élevé.<br />
+
+											L’objectif du projet est donc de développer un prototype basé sur une architecture FPGA afin
+											 de traiter les signaux bidimensionnels issus du capteur de projection de franges (profilométrie)
+											 en temps réel.<br />
+
+											<i><u>Mots clés</u>: FPGA – VHDL – Profilométrie – Matlab — Algorithme.</i>
 										</p>
 
 									<section>
 										<header>
-											<h3>Qu’est-ce que la virtualisation ?</h3>
+											<h3>Qu’est-ce que la protométrie ?</h3>
 										</header>
 										<p>
-											De manière générale, la virtualisation permet d’avoir plusieurs OS (pas nécessairement les mêmes)
-											 sur une même machine physique.
+											Pour faire simple, c’est récupérer la forme d’un objet à partir de formes lumineuses projetée dessus..<br />
+
+ 											Exemple:
 										</p>
 										<div class="image centered" style="width: 623px">
-											<img src="images/projet_pro-xen/serveurs_charge_de_travail.png" alt="Charge de travail de serveurs" />
-											<p>A gauche un serveur classique non virtualisé, et à droite un serveur virtualisé avec
-											 plusieurs environnement.</p>
+											<img src="images/projet_pro-fpga/principe.png" alt="Principe de la profilométrie" />
+											<p>Un ensemble de franges noires et blanches sont projetées sur ce visage, après analyse
+												 des photos prisent de ce visage on peut le reconstituer en 3D.</p>
 										</div>
-										<p>
-											Il existe 3 types de virtualisation:
-										</p>
-										<ul class="default">
-											<li>L’isolation</li>
-											<li>La paravirtualisation</li>
-											<li>La virtualisaiton complète</li>
-										</ul>
-										<p>
-											Xen utilise la virtualisation de type paravirtualisation:
-										</p>
-										<div class="image centered" style="border: none">
-											<img src="images/projet_pro-xen/diagramme_archihyperviseur.png" alt="Diagramme d'architecture d'hyperviseur" />
-										</div>
-										<p>
-											KVM lui utilise la virtualisation complète.
-										</p>
 									</section>
 
 									<section>
 										<header>
-											<h3>Faire fonctionner Xen</h3>
+											<h3>Calculs</h3>
 										</header>
 										<p>
-											Une des étapes majeures est de faire fonctionner XEN sur Foundation Model.<br />
+											Les calculs se font en plusieurs parties. En premier lieu il faut calculer la phase des
+											 projections de franges sans l’objet. On peut utiliser quatre images déphasées de pi/4.<br />
+
+											Puis il faudra calculer la phase des projections de franges avec l’objet.<br />
 											
-											La plateforme « Foundation Model ARMv8 » permet de simuler une architecture aarch64 avec
-											 ses périphériques essentiels pour exécuter un système d’exploitation Linux.
-											 (cette plateforme est fournie par <a href="http://www.arm.com">ARM.com</a>).
-										</p>
-										<div class="image centered" style="width: 410px">
-											<img src="images/projet_pro-xen/compilation_boot-wrapper.png" alt="Compilation et boot wrapper" />
-											<p>Le Foundation Model est lancé à partir d’une machine Ubuntu, sur laquelle la cross-compilation ARM 64bit a été effectué au préalable.</p>
-										</div>
-										<p>
-											Plusieurs OS peuvent donc être lancés sur cette machine.
-										</p>
-									</section>
-
-									<section>
-										<header>
-											<h3>Xen sur SoC</h3>
-										</header>
-										<p>
-											L’étape qui consiste à faire fonctionner Xen sur des cartes STMicroelectronics fut avortée,
-											 en effet les cartes physique étaient encore en cours de développement.<br />
-											Il a été tout de même possible de faire quelques tests sur plateforme virtuelle (VSoC) STMicroelectronics.
-											 Néanmoins certaines fonctionnalités étaient en cours de développement ce qui fait qu’une
-											 partie des tests n’ont pas put être effectués.
-										</p>
-									</section>
-
-									<section>
-										<header>
-											<h3>Les Tests</h3>
-										</header>
-										<p>
-											Pour ce qui est des tests, l’outil Xen gère bien les différentes accès mémoire et processeur.<br />
-											
-											Un des points important qui a été testé fut la capacité du réseau Ethernet.
-											 En effet les cartes STMicroelectronics  sont à destination du marché de box télévision,
-											 il faut donc un bon débit Ethernet.<br />
-											 
-											Xen offre des outils de gestion réseau:
-										</p>
-										<div class="image centered" style="width: 456px">
-											<img src="images/projet_pro-xen/network-bridge.png" alt="Xen network" />
-											<p>Xen met en place un bridge xenbr0 sur le Dom0 afin de gérer le réseau de ses différents domaines.</p>
-										</div>
-										<p>	
-											Après différents tests il s’est avéré que le débit Ethernet était fortement diminué:
+											En enfin faire la différence entre ces deux phases calculées pour obtenir une vue en 3D comme ceci:
 										</p>
 										<div class="image centered" style="width: 623px">
-											<img src="images/projet_pro-xen/network-bandwidth.png" alt="Xen network bandwidth" />
-											<p>Avec virtualisation le débit entre les différents domaines sont fortement diminué.</p>
+											<img src="images/projet_pro-fpga/traitement.png" alt="Traitement des images récupérées" />
 										</div>
+									</section>
+
+									<section>
+										<header>
+											<h3>Technologie FPGA</h3>
+										</header>
 										<p>
-											Les résultats de KVM sur le réseau sont aussi médiocres.
+											L’avantage de la technologie FPGA pour le traitement d’image c’est sa capacité
+											 à faire du traitement en parallèle.<br />
+
+											En effet dans ce projet il va falloir faire le traitement en parallèle de quatre
+											 images afin calculer la phase en une seule image.<br />
+
+											Ce projet existant déjà sous Matlab, le choix de garder une partie du programme servant
+											 d’interface avec l’utilisateur a été fait. Le FPGA fera donc essentiellement le calcul.<br />
+
+											L’ensemble du projet a été effectué sur la carte de développement DE2-70 d’Altera.
+										</p>
+										<div class="image centered" style="width: 408px">
+											<img src="images/projet_pro-fpga/de2_70.jpg" alt="Cartes de développement DE2-70" style="width: 400px" />
+											<p>Cartes de développement DE2-70.</p>
+										</div>
+									</section>
+
+									<section>
+										<header>
+											<h3>Communication Matlab – FPGA</h3>
+										</header>
+										<p>
+											Afin de faire communiquer Matlab avec le FPGA, il a été utilisé la communication
+											 la plus simple pour débuter, la liaison série RS232 (à 115.2 kBits/secondes).<br />
+
+											Un pilote à été fait, car Altera ne fourni pas de pilote série pour cette carte.
 										</p>
 									</section>
 									
 									<section>
 										<header>
-											<h3>Docker</h3>
+											<h3>Traitement</h3>
 										</header>
 										<p>
-											Une des possibilités pour concurrencer Xen et KVM en terme de virtualisation serait d’étudier les Dockers:
-										</p>	
-										<div class="image centered" style="width: 417px">
-											<img src="images/projet_pro-xen/docker_docker.png" alt="Docker" />
-											<p>Les Dokers permettent de ne virtualiser seulement les espaces utilisateur 
-												avec leur exécutable et librairie, et ainsi ne pas virtualiser l’OS dans son ensemble.</p>
+											Pour le traitement les fonctions arc-tangente, sinus et cosinus sont nécessaires,
+											 ces fonctions ne sont pas disponible sur FPGA, car elles renvoient des flottants.
+											 Il a donc fallut trouver une astuce avec un tableau de valeur les représentant.
+										</p>
+									</section>
+
+									<section>
+										<header>
+											<h3>Sauvegarde</h3>
+										</header>
+										<p>
+											Afin de sauvegarder les images réceptionnées et traitées, il a fallut utiliser la
+											 SSRAM disponible sur la carte de développement. Une fois de plus les pilotes SSRAM
+											 ne sont pas fournis par Altera, il a donc fallut les concevoir à partir de la datasheet.
+										</p>
+									</section>
+
+									<section>
+										<header>
+											<h3>Résultat</h3>
+										</header>
+										<p>
+											Voici un exemple de résultat de traitement à partir d’une anche de saxophone:
+										</p>
+										<div class="image centered" style="width: 623px; ">
+
+											<img src="images/projet_pro-fpga/mires_vierges.png" alt="Cartes de développement DE2-70" style="width: 615px; padding-bottom: 4px;" />
+											<img src="images/projet_pro-fpga/mires_objet.png" alt="Cartes de développement DE2-70" style="width: 615px; padding-bottom: 4px;" />
+											<img src="images/projet_pro-fpga/untitled_phase3_fpgamatlab_filtre_jalil_couper_2.png" alt="Cartes de développement DE2-70" style="width: 366px; float: left; padding-right: 4px;" />
+											<img src="images/projet_pro-fpga/untitled_phase3_fpgamatlab_filtre_3d_jalil_couper.png" alt="Cartes de développement DE2-70" style="width: 248px;" />
 										</div>
+										<p>
+										On obtient sur les images ci dessus, les 4 images de franges déphasées de pi/4 sans l’objet,
+										 puis les 4 images de franges déphasées de pi/4 avec l’objet. Le résultat en 2D (niveau de gris)
+										 de la anche, ainsi que le vue en 3D de celle-ci.
+										</p>
+									</section>
+
+									<section>
+										<header>
+											<h3>Amélioration</h3>
+										</header>
+										<p>
+											La liaison série utilisée est relativement lente. Ce qui a été envisagé par la suite
+											 c’est d’utiliser la liaison USB qui est beaucoup plus rapide à la place de celle-ci.
+										</p>
 									</section>
 
 								</article>
@@ -245,7 +257,7 @@
 						<div class="row">
 							<section class="12u 12u(mobile) special">
 								<header>
-									<h6>L’ensemble du stage n’est pas décrit ici. Une bonne partie a été omise. Seule la trame générale est présentée.</h6>
+									<h6>L’ensemble du projet n’est pas décrit ici. Une bonne partie a été omise. Seule la trame générale est présentée.</h6>
 								</header>
 							</section>
 						</div>
