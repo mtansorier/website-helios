@@ -2417,6 +2417,21 @@
 			padding-top: 2em;
 		}
 
+		#main header > p {
+			font-size: 1em;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		#main header > h3.projet-titre{
+			display: inline-block;
+		}
+
+		#main header > h3.projet-date{
+			display: inline-block;
+			float: right;
+		}
+
 		#main p, ul, ol, dl, table {
 			margin-top: 5px;
 			margin-bottom: 5px;
@@ -2424,7 +2439,7 @@
 			/*font-size: 1em;*/
 		}
 
-		#main p br {
+		#main p > br {
 			margin-bottom: 5px;
 		}
 
