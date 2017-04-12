@@ -1553,7 +1553,7 @@
 
 	body {
 		background: #f0f4f4;
-		color: #4d5059;
+		color: #60636B;
 		font-size: 15pt;
 		line-height: 1.85em;
 		font-family: 'Ubuntu','Source Sans Pro', sans-serif;
@@ -1580,7 +1580,7 @@
 
 	h1, h2, h3, h4, h5 {
 		font-weight: bold;
-		color: #4d5059;
+		color: #60636B;
 		line-height: 1.25em;
 	}
 
@@ -1633,7 +1633,7 @@
 	}
 
 		a:hover {
-			color: #4d5059;
+			color: #60636B;
 			border-bottom-color: transparent;
 		}
 
@@ -1918,7 +1918,7 @@
 	form label {
 		display: block;
 		font-weight: bold;
-		color: #4d5059;
+		color: #60636B;
 		margin: 0 0 1em 0;
 	}
 
