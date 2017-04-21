@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Projets PIC</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="icon" type="image/png" href="images/favicon.png" />
+		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
+	</head>
+	<body class="left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1>Projets PIC</h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Accueil</a></li>
+								<li>
+									<a href="projet_pro.html">Projet Pro.</a>
+									<ul>
+										<li><a href="projet_pro-xen.html">Virtualisation XEN</a></li>
+										<li><a href="projet_pro-fpga.html">Traitement d’images sur FPGA</a></li>
+										<li>
+											<a href="#">OpenWide/Smile ...</a>
+											<ul>
+												<li><a href="#">IRT-systemX: Xvisor</a></li>
+												<li><a href="#">Quantaflow: Quantium v2</a></li>
+												<li><a href="#">Hutchinson: AVAC</a></li>
+												<li><a href="#">Canal+: Intégrateur Yocto</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="projet_perso.html">Projet Perso.</a>
+									<ul>
+										<li>
+											<a href="projet_perso-PIC.html">Projets PIC ...</a>
+											<ul>
+												<li><a href="projet_perso-PIC.html#table_infini">Table d’illusion infinie – PIC16F87</a></li>
+												<li><a href="projet_perso-PIC.html#telecommande_IR">Télécommande infrarouge – PIC16F87</a></li>
+												<li><a href="projet_perso-PIC.html#feu_tricolore">Feu tricolore de présence – PIC16F87</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="projet_perso-sites_web.html">Sites Web ...</a>
+											<ul>
+												<li><a href="projet_perso-sites_web.html#AJC72">Antonnière Judo Club 72</a></li>
+												<li><a href="projet_perso-sites_web.html#SMMP">Service Moules et Mécanique de Précision</a></li>
+												<li><a href="projet_perso-sites_web.html#TANSORIER">Site presonnel</a></li>
+												<li><a href="projet_perso-sites_web.html#CDJS">Forum pour le Comité Départemental de Judo de la Sarthe</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li><a href="#">Judo</a></li>
+								<li><a href="#">Associations</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<div class="row 200%">
+							
+							<!-- left part -->
+							<div class="3u 12u(mobile)" id="sidebar">
+								<hr class="first" />
+								<section>
+									<header>
+										<h3>Projets PIC</h3>
+									</header>
+									<ul class="leftmenu">
+                                        <li><a href="projet_perso-PIC.html#table_infini">Table d’illusion infinie – PIC16F87</a></li>
+										<li><a href="projet_perso-PIC.html#telecommande_IR">Télécommande infrarouge – PIC16F87</a></li>
+										<li><a href="projet_perso-PIC.html#feu_tricolore">Feu tricolore de présence – PIC16F87</a></li>
+									</ul>
+								</section>
+								<hr />
+							</div>
+							
+							<!-- right part -->
+							<div class="7u 12u(mobile) important(mobile)" id="content">
+								<article id="main">
+									<header>
+										<h3>J’ai réalisé plusieurs projets à base de microcontrôleur PIC de chez Microchip:</h3>
+                                        <p>
+                                            <ul class="default">
+                                                <li>Table d’illusion infinie</li>
+                                                <li>Télécommande infrarouge</li>
+                                                <li>Feu tricolore de présence</li>
+                                            </ul>
+                                        </p>
+                                        <p>
+                                            Ces projets sont décrits ci-dessous.
+                                        </p>
+									</header>
+
+									<section id="table_infini">
+										<header>
+											<h3><u>Table d’illusion infinie – PIC16F87</u></h3>
+										</header>
+										<p>
+											Ce projet a pour objectif de créer une illusion d’optique par un effet de jeu de réflexion lumineuse.<br />
+											
+											C’est cette vidéo qui m’a inspiré ce projet: <a href="https://www.youtube.com/watch?v=urLXxOH-Tqg">https://www.youtube.com/watch?v=urLXxOH-Tqg</a><br />
+											
+											J’ai repris le même principe que dans la vidéo ci-dessus, plutôt que d’utiliser un ruban de LED déjà fait, j’ai préféré concevoir moi-même un ensemble de LED (RGB) contrôlé par microcontrôleur PIC afin de créer mes propres modulations de couleur.
+										</p>
+										
+										<div class="image centered" style="width: 631px; ">
+											<img src="images/projet_perso-PIC/table_infini_01.jpg" alt="Effet trou infini" style="width: 412px; float: left; padding-right: 4px;" />
+											<img src="images/projet_perso-PIC/table_infini_02.jpg" alt="Effet trou infini" style="width: 211px; float: left; padding-bottom: 4px;" />
+											<img src="images/projet_perso-PIC/table_infini_03.jpg" alt="Effet trou infini" style="width: 211px;" />
+										</div>
+										
+										<h4>Partie non électronique:</h4>
+										
+                                        <p>
+                                            Le principe lumineux qui créer cette sensation de trou infini vient de l’association d’un miroir et d’un miroir sans tain. Le miroir reflète la totalité de la lumière reçue, alors que le miroir sans tain reflète environ 70% de la lumière émise, le reste (les 30%) passe au travers.
+										</p>
+
+										<div class="image centered" style="width: 623px">
+											<img src="images/projet_perso-PIC/table_infini_04.png" alt="Représentation de l'effet de réflexion lumineuse" />
+										</div>
+
+                                        <p>
+                                            Ainsi une partie de la lumière qui est reflétée plusieurs fois entre les deux miroirs (en rouge) ressort à un moment donné (en vert) pour venir jusqu’à nos yeux.<br />
+										
+                                            Pour ce qui est de la construction, il faut une table, un miroir, une vitre avec un filtre sans tain, et un ensemble de baguettes servant à y mettre les différentes LED.
+                                        </p>
+                                        
+                                        <div class="image centered" style="width: 217px">
+											<img src="images/projet_perso-PIC/table_infini_05.jpg" alt="Représentation de l'effet de réflexion lumineuse" />
+										</div>
+										
+                                        <h4>Partie électronique:</h4>
+                                        
+                                        <p>
+                                            Pour la gestion lumineuse, j’ai utilisé un microcontrôleur PIC16F87.<br />
+
+                                            L’objectif de ce microcontrôleur est de fournir un signal modulé (PWM) afin de pouvoir faire varier la couleur émise par les différentes LEDs.<br />
+
+                                            Le microcontrôleur permet aussi de créer différents modes, un peu comme les différents modes d’une guirlande de noël.<br />
+
+                                            L’ensemble des 20 LEDs ont été branchées sur un PCB.
+                                        </p>
+                                        
+                                        <div class="image centered" style="width: 623px; ">
+											<img src="images/projet_perso-PIC/table_infini_06.jpg" alt="Effet trou infini" style="width: 274 px; float: left; padding-right: 4px;" />
+											<img src="images/projet_perso-PIC/table_infini_07.jpg" alt="Effet trou infini" style="width: 337px;" />
+										</div>
+										
+										<p>
+											<a href="https://github.com/mtansorier/infini-table.git" class="icon fa-github" title="GitHub"><span class="label">GitHub</span> Sources disponible sur GitHub</a>
+										</p>
+									</section>
+									
+									<section id="telecommande_IR">
+										<header>
+											<h3><u>Télécommande infrarouge – PIC16F87</u></h3>
+										</header>
+										<p>
+											Ce projet a pour but de créer une télécommande infrarouge permettant de contrôler à distance des relais afin de gérer l’alimentation de prises secteurs.
+										</p>
+										
+										<div class="image centered" style="width: 296px">
+											<img src="images/projet_perso-PIC/infra_rouge_01.jpg" alt="Boitiers secteurs et télécommande" />
+										</div>
+										
+										<p>
+											La télécommande infrarouge génère un code transmis par infrarouge au récepteur relié au module de prise secteur.<br />
+
+											Il y a deux boutons avec deux codes différents contrôlant deux prises secteurs différentes.<br />
+
+											Sur l’image ci-dessus on peut voir le témoin lumineux en vert indiquant que la prise secteur de gauche est alimentée.
+										</p>
+										
+										<div class="image centered" style="width: 275px">
+											<img src="images/projet_perso-PIC/infra_rouge_02.jpg" alt="Télécommande" />
+										</div>
+										
+										<p>
+											Le protocole de communication est basé sur le protocole RS-232. Il a donc 1 bit de start, 8 bits de données et un bit de stop.
+										</p>
+										
+										<p>
+											<a href="https://github.com/mtansorier/IR-Transmitor.git" class="icon fa-github" title="GitHub"><span class="label">GitHub</span> Sources du <strong>transmiteur</strong> disponible sur GitHub</a><br />
+											<a href="https://github.com/mtansorier/IR-Receptor.git" class="icon fa-github" title="GitHub"><span class="label">GitHub</span> Sources du <strong>recepteur</strong> disponible sur GitHub</a>
+										</p>
+									</section>
+									
+									<section id="feu_tricolore">
+										<header>
+											<h3><u>Feu tricolore de présence – PIC16F87</u></h3>
+										</header>
+										<p>
+											C’est un projet de feux tricolore permettant de gérer la présence ou non d’une personne dans des toilettes à l’aide de trois boutons poussoirs.
+										</p>
+										
+										<div class="image centered" style="width: 623px; ">
+											<img src="images/projet_perso-PIC/feu_tricolore_01.jpg" alt="microcontrôleur" style="width: 472px; float: left; padding-right: 4px;" />
+											<img src="images/projet_perso-PIC/feu_tricolore_02.jpg" alt="Boitiers feux" style="width: 139px;" />
+										</div>
+										
+										<p>
+											Le premier bouton indique que les toilettes sont occupées (passe au rouge), le deuxième indique qu’elles sont libres (passe au orange puis au vert), et le dernier indique qu’il faut mieux attendre un moment avant d’aller aux toilettes (passe au orange pendant 1minute puis au vert).
+										</p>
+										
+										<div class="image centered" style="width: 623px; ">
+											<img src="images/projet_perso-PIC/feu_tricolore_03.jpg" alt="feu vert" style="width: 205px; float: left; padding-right: 4px;" />
+											<img src="images/projet_perso-PIC/feu_tricolore_04.jpg" alt="feu orange" style="width: 205px; float: left; padding-right: 4px;" />
+											<img src="images/projet_perso-PIC/feu_tricolore_05.jpg" alt="feu rouge" style="width: 201px;" />
+										</div>
+										
+										<p>
+											<a href="https://github.com/mtansorier/wc-traffic-lights.git" class="icon fa-github" title="GitHub"><span class="label">GitHub</span> Sources disponible sur GitHub</a>
+										</p>
+									</section>
+
+								</article>
+							</div>
+						</div>
+						
+					</div>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="12u">
+
+								<!-- Contact -->
+									<section class="contact">
+										<header>
+											<h3>Vous pouvez me retrouver sur:</h3>
+										</header>
+										<ul class="icons">
+											<li><a href="https://www.linkedin.com/in/micka%C3%ABl-tansorier-78b5549a/" class="icon fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+											<li><a href="https://github.com/mtansorier" class="icon fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
+											<li><a href="https://mickaeltansorier.wordpress.com/" class="icon fa-wordpress" title="Wordpress"><span class="label">Wordpress</span></a></li>
+											<li><a href="mailto:mickael@tansorier.fr" class="icon fa-envelope-o" title="E-mail"><span class="label">E-mail</span></a></li>
+											<li><a href="docs/Curriculum_Vitae_-_TANSORIER.pdf" class="icon fa-download" title="Curriculum Vitae"><span class="label">Curriculum Vitae</span></a></li>
+										</ul>
+									</section>
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li><img src="images/by.svg" /></li><li>Mickaël TANSORIER</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.onvisible.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
