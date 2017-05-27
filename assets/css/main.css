@@ -1703,6 +1703,47 @@
 		font-size: 0.8em;
 	}
 
+	.infobulle {
+		position: relative;  /* les .infobulle deviennent référents */
+		/*cursor: help;*/
+	}
+
+	/* on génère un élément :after lors du survol et du focus :*/
+	.infobulle:hover::after,
+	.infobulle:focus::after {
+		content: attr(texte-infobulle);  /* on affiche aria-label */
+		position: absolute;
+		top: -2.2em;
+		left: 50%;
+		transform: translateX(-10%); /* on centre horizontalement  */
+		z-index: 1; /* pour s'afficher au dessus des éléments en position relative */
+		white-space: nowrap;  /* on interdit le retour à la ligne */
+		padding: 0px 5px;
+		line-height: 20px;
+		background: #CACACA;
+		color: #fff;
+		border-radius: 4px;
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+	/* on génère un second élément en :before pour la flèche */
+	[texte-infobulle]:hover:before,
+	[texte-infobulle]:focus:before {
+		content: "▼";
+		position: absolute;
+		top: -1.4em;
+		left: 50%;
+		transform: translateX(-50%); /* on centre horizontalement  */
+		font-size: 12px;
+		color: #CACACA;
+	}
+
+	/* pas de contour durant le :focus */
+	[texte-infobulle]:focus {
+		outline: none;
+	}
+
 /* Sections/Article */
 
 	section, article {
